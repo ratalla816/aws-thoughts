@@ -44,8 +44,21 @@
 
   ## Documentation
   
-  * <https:///> - AWS Documentation
-  * <https://> - TBD
+  * <a href="https://aws.amazon.com">AWS</a> 
+  * <a href="https://aws.amazon.com/iam">IAM (Identity and Access Management)</a>
+  * <a href="https://aws.amazon.com/s3">S3 (Simple Storage Service)</a>
+  * <a href="https://aws.amazon.com/dynamodb">DynamoDB (Database)</a> 
+  * <a href="https://aws.amazon.com/ec2">EC2 (Elastic Compute Cloud)</a>
+  * <a href="https://aws.amazon.com/ecs">ECS (Elastic Container Service)</a>
+  * <a href="https://aws.amazon.com/cli">Amazon Command Line Interface (CLI)</a>
+  * <a href="https://aws.amazon.com/lambda">Lambda (Lambda Functions)</a>
+  * <a href="https://aws.amazon.com/cloudfront">CloudFront (Content Delivery Network)</a>
+  * <a href="https://aws.amazon.com/cloudwatch">CloudWatch (Monitoring)</a>
+  * <a href="https://www.npmjs.com/package/aws-sdk">AWS-SDK (official AWS software development kit (SDK) for JavaScript)
+  * <a href="https://www.npmjs.com/package/multer">Multer (Node.js middleware for handling file uploads)</a>
+  * <a href="https://www.npmjs.com/package/uuid">UUID Universally Unique Identifier - generates random alphanumeric strings that can serve as unique identifiers. (generate identifiers for S3 bucket and application images)</a>
+  * <a href="https://www.npmjs.com/package/pm2">Node.js production process manager that helps you manage your web application—and keep it live online.</a>
+  * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
   * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-1-cloud-intro>
  
   ## Usage
