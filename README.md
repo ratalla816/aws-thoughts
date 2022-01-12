@@ -59,7 +59,7 @@
   * <a href="https://www.npmjs.com/package/uuid">UUID Universally Unique Identifier - generates random alphanumeric strings that can serve as unique identifiers. (generate identifiers for S3 bucket and application images)</a>
   * <a href="https://www.npmjs.com/package/pm2">Node.js production process manager that helps you manage your web application—and keep it live online.</a>
   * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
-  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-1-cloud-intro>
+  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-2-dynamodb>
  
   ## Usage
 
@@ -78,7 +78,7 @@
   * As a user, I want to be able to visit the app on a public URL.
 
   ### Instructions 
-  *
+  * Install AWS-CLI on Windows <https://awscli.amazonaws.com/AWSCLIV2.msi><br>To verify the installation, open the Start menu, search for cmd to open a command-prompt window, and at the command prompt use the aws --version command.
   * 
   * 
 
