@@ -19,6 +19,16 @@
 
    We've chosen Amazon Web Services, or AWS, to fulfill this role. We chose AWS over other providers, like Microsoft Azure or the Google Cloud Platform, because AWS is currently the most comprehensive and widely adopted cloud platform. 
    AWS offers the widest range of web services, a vast array of customers (from startups to enterprise), and an extensive free tier.
+
+   Upon completing this project, we will learn how to do the following:
+
+   * Configure IAM user permissions to connect various AWS services.
+
+   * Store and retrieve static assets using Amazon Simple Storage Service (S3).
+
+   * Connect an existing application to a DynamoDB database.
+
+   * Configure a Linux server to deploy the application to an Elastic Compute Cloud (EC2) instance.
  
   ## Table of Contents
   - [Description](#description)
