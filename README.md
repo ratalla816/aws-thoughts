@@ -87,7 +87,7 @@
   ![Screenshot](./assets/images/aws.png)
 
   ## Features
-  TBD
+  * DynamoDB<br>With MongoDB and relational databases like MySQL, as the number of requests increase, the performance drops.<br>DynamoDB, however, was made with high performance under extreme load conditions in mind. If we use a large-scale-first mentality when designing web applications, we can circumvent the technical debt of database migration by starting with a system that can handle a high request load.
   
   # Acknowledgements
   
