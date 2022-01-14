@@ -81,7 +81,14 @@
   ### Instructions 
   * Install AWS-CLI on Windows <https://awscli.amazonaws.com/AWSCLIV2.msi><br>To verify the installation, open the Start menu, search for cmd to open a command-prompt window, and at the command prompt use the aws --version command.
   * Use the aws-sdk package to interface with AWS from the Node.js application.<br>Create a file the root directory called create-bucket.js and import the uuid package<br>Download the NPM packages to the node_modules directory with the following command: npm install aws-sdk uuid<br>Now run the create-bucket.js file at the command line from the root directory of the application, as follows: node create-bucket.js<br>You should see a success message in the command line if you've successfully created a new S3 bucket.
-  * 
+  * Download the DynamoDB file and start a local instance of the database:<br>
+  Visit the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html">AWS DynamoDB download page and select the zip file in the US region.</a><br>
+  Open the zip file to expand the folder.<br>
+  Open the CLI, navigate to where this folder is located, and cd into that folder.<br>
+  Run the following command: java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb<br>
+  Upon success you will should see a message similar to this:<br>![Screenshot](./assets/images/dynamoSuccess.jpg)<br>
+  
+  *
 
 
   ## Screenshot
