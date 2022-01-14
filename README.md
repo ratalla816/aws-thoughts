@@ -61,6 +61,7 @@
   * <a href="https://www.npmjs.com/package/pm2">Node.js production process manager that helps you manage your web application—and keep it live online.</a>
   * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
   * <a href="https://dynobase.dev/run-dynamodb-locally/#connecting-dynamodb-offline-sdk">How to run DynamoDB Local and Offline - Complete Guide</a>
+  
   * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-2-dynamodb>
  
   ## Usage
@@ -81,15 +82,20 @@
 
   ### Instructions 
   * Install AWS-CLI on Windows <https://awscli.amazonaws.com/AWSCLIV2.msi><br>To verify the installation, open the Start menu, search for cmd to open a command-prompt window, and at the command prompt use the aws --version command.
+  
   * Use the aws-sdk package to interface with AWS from the Node.js application.<br>Create a file the root directory called create-bucket.js and import the uuid package<br>Download the NPM packages to the node_modules directory with the following command: npm install aws-sdk uuid<br>Now run the create-bucket.js file at the command line from the root directory of the application, as follows: node create-bucket.js<br>You should see a success message in the command line if you've successfully created a new S3 bucket.
+  
   * Download the DynamoDB file and start a local instance of the database:<br>
   Visit the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html">AWS DynamoDB download page and select the zip file in the US region.</a><br>
   Open the zip file to expand the folder.<br>
   Open the CLI, navigate to where this folder is located, and cd into that folder.<br>
   Run the following command: java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb<br>
   Upon success you will should see a message similar to this:<br>![Screenshot](./assets/images/dynamoSuccess.jpg)<br>
-
-  *
+  
+  * Create a table in ./server/db then run the following command: node ./server/db/(your-table-name).js<br>
+  If the table was created successfully, we should see a message that resembles the following image:<br>![Screenshot](./assets/images/tableSuccess.jpg)<br>
+  
+  * 
 
 
   ## Screenshot
