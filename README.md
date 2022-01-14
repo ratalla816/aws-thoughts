@@ -62,7 +62,7 @@
   * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
   * <a href="https://dynobase.dev/run-dynamodb-locally/#connecting-dynamodb-offline-sdk">How to run DynamoDB Local and Offline - Complete Guide</a>
   
-  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-2-dynamodb>
+  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-2-dynamodb><br>![Screenshot](./assets/images/leftOff.jpg)<br>
  
   ## Usage
 
@@ -97,6 +97,7 @@
   
   * Run seeds by navigating to the root directory then execute this command: node ./server/db/LoadThoughts.js<br>
   If the seeds were created successfully, we should see a message that resembles the following image:<br>![Screenshot](./assets/images/seedSuccess.jpg)<br>
+  
   * Next
 
 
