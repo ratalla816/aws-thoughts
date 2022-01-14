@@ -95,7 +95,9 @@
   * Create a table in ./server/db then run the following command: node ./server/db/(your-table-name).js<br>
   If the table was created successfully, we should see a message that resembles the following image:<br>![Screenshot](./assets/images/tableSuccess.jpg)<br>
   
-  * 
+  * Run seeds by navigating to the root directory then execute this command: node ./server/db/LoadThoughts.js<br>
+  If the seeds were created successfully, we should see a message that resembles the following image:<br>![Screenshot](./assets/images/seedSuccess.jpg)<br>
+  * Next
 
 
   ## Screenshot
