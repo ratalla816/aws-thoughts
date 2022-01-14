@@ -48,6 +48,7 @@
   * <a href="https://aws.amazon.com/iam">IAM (Identity and Access Management)</a>
   * <a href="https://aws.amazon.com/s3">S3 (Simple Storage Service)</a>
   * <a href="https://aws.amazon.com/dynamodb">DynamoDB (Database)</a> 
+  * <a href="https://aws.amazon.com/blogs/database/choosing-the-right-dynamodb-partition-key/#:~:text=DynamoDB%20stores%20data%20as%20groups,value%2C%20which%20must%20be%20unique.&text=DynamoDB%20splits%20partitions%20by%20sort,grows%20bigger%20than%2010%20GB">AWS documentation on partition keys for DynamoDB</a> 
   * <a href="https://aws.amazon.com/ec2">EC2 (Elastic Compute Cloud)</a>
   * <a href="https://aws.amazon.com/ecs">ECS (Elastic Container Service)</a>
   * <a href="https://aws.amazon.com/cli">Amazon Command Line Interface (CLI)</a>
@@ -87,7 +88,7 @@
   Open the CLI, navigate to where this folder is located, and cd into that folder.<br>
   Run the following command: java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb<br>
   Upon success you will should see a message similar to this:<br>![Screenshot](./assets/images/dynamoSuccess.jpg)<br>
-  
+
   *
 
 
