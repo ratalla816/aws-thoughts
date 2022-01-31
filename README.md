@@ -90,6 +90,10 @@
   Open the zip file to expand the folder.<br>
   Open the CLI, navigate to where this folder is located, and cd into that folder.<br>
   Run the following command: java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb<br>
+  NOTE! Windows 10 users might need to enclose parameter name or the name & value. Try running one of these paths instead:<br>
+  java -D"java.library.path"=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb (this is what I use)<br>
+  OR<br>
+  java "-Djava.library.path=./DynamoDBLocal_lib" -jar DynamoDBLocal.jar -sharedDb
   Upon success you will should see a message similar to this:<br>![Screenshot](./assets/images/dynamoSuccess.jpg)<br>
   
   * Create a table in ./server/db then run the following command: node ./server/db/(your-table-name).js<br>
