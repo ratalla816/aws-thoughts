@@ -30,9 +30,18 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
-  color: var(--dark);
-  background-color: #f3fffee1;
+  color: var(--light);
+  /* background-color: #f3fffee1; */
+  background-color: lightsteelblue;
 }
+
+.m-0 {
+ color: var(--light);
+}
+
+/* div {
+  color: var(--dark);
+} */
 
 h1,
 h2,
@@ -115,9 +124,9 @@ nav a:hover {
   margin: 5px 0;
   border-radius: var(--border-radius);
   border: none;
-  color: var(--dark);
+  color: var(--light);
   outline: none;
-  background-color: var(--secondary);
+  background-color: var(--dark);
   transition: all 0.5s;
 }
 
