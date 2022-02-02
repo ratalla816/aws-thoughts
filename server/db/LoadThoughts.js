@@ -8,8 +8,13 @@ const fs = require('fs');
 
 AWS.config.update({
     region: "us-east-2",
-    endpoint: "http://localhost:8000"
+  endpoint: "http://localhost:8000" 
   });
+
+// AWS.config.update({
+//   region: "us-east-2"
+// });
+
   const dynamodb = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
 
 //   In the next step, we'll use the fs package to read the users.json file and assign the object to the allUsers constant, as follows:
