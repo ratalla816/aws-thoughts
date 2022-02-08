@@ -120,6 +120,9 @@ const params = {
     }
 };
 
+// Because we're dealing with a NoSQL database, 
+// we don't have to adjust the table schema or perform a migration like we would for a relational database.
+
 dynamodb.put(params, (err, data) => {
     if (err) {
         console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
