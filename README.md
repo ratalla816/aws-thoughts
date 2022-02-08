@@ -62,8 +62,8 @@
   * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
   * <a href="https://dynobase.dev/run-dynamodb-locally/#connecting-dynamodb-offline-sdk">How to run DynamoDB Local and Offline - Complete Guide</a>
   
-  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-3-integrate-db><br>
-  SEE ISSUE #6 FOR MORE INFORMATION
+  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-4-deploy><br>
+  SEE ISSUE #7 FOR MORE INFORMATION
   <!-- ![Screenshot](./assets/images/leftOff.jpg)<br> -->
  
   ## Usage
@@ -104,12 +104,20 @@
   * Run seeds by navigating to the root directory then execute this command: node ./server/db/LoadThoughts.js<br>
   If the seeds were created successfully, we should see a message that resembles the following image:<br>![Screenshot](./assets/images/seedSuccess.jpg)<br>
   
-  * Next
+  ### Pricing 
+
+  We'll use an EC2 instance to host the application. EC2, or Elastic Cloud Compute, is a cornerstone of AWS's Infrastructure-as-a-Service (IaaS) model. An EC2 instance provides a powerful computing services that can be located in any region around the globe. An EC2 is a great example of leveraging AWS's cloud infrastructure. As the need for capacity changes with the demands of a website, EC2 instances can be quickly added or dropped depending on the need.
+
+  With AWS's free tier, we can use a free EC2 instance for up to 750 hours per month—running the EC2 instance roughly 24/7 for the entire month. With the EC2 instance available on the free tier, the website can handle approximately 45 concurrent users. If we reach this capacity, we can easily add another EC2 instance—however, we'll exceed the free tier because this will add about 744 hours of computing time each month. Because EC2 costs about five cents per hour, this will equate to an additional $37 per month, or $444 per year.
+
+  This cost analysis shows that an EC2 instance is much more expensive compared to a Heroku deployment as a comparison. Normally an EC2 instance is used by a company that needs to handle a steady amount of requests or concurrent users. EC2 instances are also great for supporting roles as an emergency backup system in case the main servers go down.
 
 
   ## Screenshot
   ![Screenshot](./assets/images/uploaded.jpg)
   
+  ![Screenshot](./assets/images/handey.jpg)
+ 
   ![Screenshot](./assets/images/insomnia.jpg)
 
   ## Features

@@ -86,15 +86,15 @@ router.get('/users/:username', (req, res) => {
         "#un": "username",
         "#ca": "createdAt",
         "#th": "thought",
-        "#img": "image"
+        "#img": "image" // add the image attribute alias
     },
 
     ExpressionAttributeValues: {
         ":user": req.params.username
     },
 
-    ProjectionExpression: "#un, #th, #ca, #img",
-    ScanIndexForward: false
+    ProjectionExpression: "#un, #th, #ca, #img", // add the image to the database response
+    ScanIndexForward: false  // false makes the order descending(true is default)
 };
 
 dynamodb.query(params, (err, data) => {

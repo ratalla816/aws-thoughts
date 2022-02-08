@@ -11,7 +11,14 @@ const params = fileName => {
       Bucket: 'user-images-a0304b94-e3b2-49e3-b271-b2af45d13442',
       Key: `${uuidv4()}.${fileType}`,
       Body: fileName.buffer,
-      ACL: 'public-read'
+
+    //   To access the images in the bucket from a public URL, we'll need to grant access privileges to the S3 bucket. 
+    //   AWS can grant privileges in a few different ways in an S3 bucket. We can grant access to each file in the bucket or grant access to the bucket, for all the files or objects stored in the bucket.
+
+    //   To do this programmatically, we can assign an ACL (or access-control list) permission on each image file. 
+    //   Let's add this permission property to the imageParams object, which we configured in the params-config.js file in the server/utils folder
+
+      ACL: 'public-read' // allow read access to this file
     };
   
     return imageParams;
