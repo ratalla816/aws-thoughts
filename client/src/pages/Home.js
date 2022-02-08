@@ -30,22 +30,22 @@ const Home = () => {
 // Notice that the dependency array is empty, so this fetch will only be invoked once when the component mounts.
 // It's a good idea to use a try...catch block in case the web service call doesn't work.
 
-  return (
-    <main>
-      <div className="flex-row justify-space-between">
-        <div className="col-12 mb-3">
-          <ThoughtForm />
-        </div>
-        <div className={`col-12 mb-3 `}>
-          {!isLoaded ? (
-            <div>Loading...</div>
-          ) : (
-              <ThoughtList thoughts={thoughts} setThoughts={setThoughts} title="Some Feed for Thought(s)..." />
-            )}
-        </div>
+return (
+  <main>
+    <div className="flex-row justify-space-between">
+      <div className="col-12 mb-3">
+        <ThoughtForm />
       </div>
-    </main>
-  );
+      <div className={`col-12 mb-3 `}>
+        {!isLoaded ? (
+          <div>Loading...</div>
+        ) : (
+          <ThoughtList thoughts={thoughts} setThoughts={setThoughts} title="Some Feed for Thought(s)..." />
+        )}
+      </div>
+    </div>
+  </main>
+);
 };
 
 export default Home;

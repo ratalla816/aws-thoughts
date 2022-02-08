@@ -6,7 +6,7 @@ const router = express.Router();
 
 const AWS = require("aws-sdk");
 const awsConfig = {
-region: "us-east-2",
+region: "us-east-2"
 // endpoint: "http://localhost:8000", 
 };
 
@@ -88,9 +88,11 @@ router.get('/users/:username', (req, res) => {
         "#th": "thought",
         "#img": "image"
     },
+
     ExpressionAttributeValues: {
         ":user": req.params.username
     },
+
     ProjectionExpression: "#un, #th, #ca, #img",
     ScanIndexForward: false
 };
@@ -103,7 +105,7 @@ dynamodb.query(params, (err, data) => {
         console.log("Query succeeded.");
         res.json(data.Items)
     }
-});
+  });
 }); // closes the route for router.get(users/:username)
 
 // Create new user at /api/users
@@ -117,6 +119,7 @@ const params = {
         "image": req.body.image
     }
 };
+
 dynamodb.put(params, (err, data) => {
     if (err) {
         console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
@@ -125,7 +128,7 @@ dynamodb.put(params, (err, data) => {
         console.log("Added item:", JSON.stringify(data, null, 2));
         res.json({ "Added": JSON.stringify(data, null, 2) });
     }
-});
+ });
 });  // ends the route for router.post('/users')
 
 

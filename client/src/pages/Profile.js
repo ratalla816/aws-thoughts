@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ThoughtList from '../components/ThoughtList';
 
+
+
 const Profile = props => {
   const { username: userParam } = useParams();
   const [isLoaded, setIsLoaded] = useState(false);
   const [thoughts, setThoughts] = useState([{
     username: userParam,
-    createdAt: '', 
+    createdAt: '',
     thought: '',
   }]);
 

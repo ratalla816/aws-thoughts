@@ -7,7 +7,7 @@ const fs = require('fs');
 // We'll be using this class for most of the database calls in this project.
 
 AWS.config.update({
-    region: "us-east-2",
+    region: "us-east-2"
   // endpoint: "http://localhost:8000" 
   });
 
