@@ -8,14 +8,10 @@ const fs = require('fs');
 
 AWS.config.update({
     region: "us-east-2",
-  endpoint: "http://localhost:8000" 
+  // endpoint: "http://localhost:8000" 
   });
 
-// AWS.config.update({
-//   region: "us-east-2"
-// });
-
-  const dynamodb = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
+const dynamodb = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
 
 //   In the next step, we'll use the fs package to read the users.json file and assign the object to the allUsers constant, as follows:
 
@@ -48,8 +44,8 @@ dynamodb.put(params, (err, data) => {
     } else {
       console.log("PutItem succeeded:", user.username);
     }
+  });
 });
-})
 
 // In the preceding statement, we used the same pattern that we used to create the table, but this time we used the put method.
 // Due to the fs.readFileSync function, we must navigate to the root directory of the project first. Otherwise, we'll receive an error that no file was found. Then we can execute the following command:

@@ -6,12 +6,8 @@ const AWS = require('aws-sdk');
 
 AWS.config.update({
     region: "us-east-2",
-    endpoint: "http://localhost:8000" 
+    // endpoint: "http://localhost:8000" 
   });
-
-// AWS.config.update({
-//   region: "us-east-2"
-// });
 
 //   Next, create the DynamoDB service object by adding the following expression:
 
@@ -42,15 +38,15 @@ AWS.config.update({
     // We assigned a string to the username and a number to createdAt, indicated by "S" and "N" respectively.
     
  AttributeDefinitions: [       
-   { AttributeName: "username", AttributeType: "S" },
-   { AttributeName: "createdAt", AttributeType: "N" }
+   { AttributeName: "username", AttributeType: "S" }, // STRING
+   { AttributeName: "createdAt", AttributeType: "N" } // NUMBER
  ],
 
     // Next is the ProvisionedThroughput property. 
     // This setting reserves a maximum write and read capacity of the database, which is how AWS factors in pricing.
 
      ProvisionedThroughput: {       
-       ReadCapacityUnits: 10, 
+       ReadCapacityUnits: 10, // reserves a maximum read and write capacity
        WriteCapacityUnits: 10
      }
    };
