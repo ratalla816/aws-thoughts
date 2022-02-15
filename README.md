@@ -62,9 +62,11 @@
   * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
   * <a href="https://dynobase.dev/run-dynamodb-locally/#connecting-dynamodb-offline-sdk">How to run DynamoDB Local and Offline - Complete Guide</a>
   
-  * Left off here: <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-4-deploy><br>
-  SEE ISSUE #7 FOR MORE INFORMATION
-  <!-- ![Screenshot](./assets/images/leftOff.jpg)<br> -->
+  ### Left off here:<br>
+  *Set Up the EC2 Environment<br>
+  <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-4-deploy><br>
+  
+  ![Screenshot](./assets/images/set-up-ec2.jpg)<br>
  
   ## Usage
 
