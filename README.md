@@ -117,21 +117,10 @@
   We'll add a bucket policy that will grant read access for anonymous users so that anyone can see the images in their browsers.<br>
   Enter the following code into the text editor on the Bucket Policy page by selecting the JSON tab:<br>![Screenshot](./assets/images/s3-permission-script.jpg)<br>
 
-  {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": [
-                "arn:aws:s3:::user-images-(ADD YOUR S3 BUCKET ADDRESS HERE)/*",
-                "arn:aws:s3:::user-images-(ADD YOUR S3 BUCKET ADDRESS HERE)"
-            ]
-        }
-    ]
-}
+  Make sure to save this policy. To understand most security policies, you should consider who gets access and what type of access will they receive.<br>
+  In the preceding bucket policy the "who" is the Principal, which is set to everyone.<br> 
+  The type of Action or what this policy allows, is GetObject, which also means the read object, which is the image file in this case.<br> 
+  In the Resource property, you designate the S3 bucket name and all its contents.<br>
 
   
   ### Pricing 
