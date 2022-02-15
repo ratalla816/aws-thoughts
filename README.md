@@ -103,6 +103,36 @@
   
   * Run seeds by navigating to the root directory then execute this command: node ./server/db/LoadThoughts.js<br>
   If the seeds were created successfully, we should see a message that resembles the following image:<br>![Screenshot](./assets/images/seedSuccess.jpg)<br>
+
+  * Run the server by navigating to the root directory then execute this command: node ./server/server.js<br>
+
+  * Start react server by Navigating to the client folder of the application and execute the following command: npm start<br>
+
+  ### SET PUBLIC ACCESS PERMISSIONS FOR S3 BUCKET
+
+  To enable anyone with the URL address to view the images files, we must allow public read access. First navigate in the browser to the S3 console, then select the bucket name.<br>
+
+  Select the Permissions menu option, then select Bucket Policy.<br>
+
+  We'll add a bucket policy that will grant read access for anonymous users so that anyone can see the images in their browsers.<br>
+  Enter the following code into the text editor on the Bucket Policy page by selecting the JSON tab:<br>![Screenshot](./assets/images/s3-permission-script.jpg)<br>
+
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": [
+                "arn:aws:s3:::user-images-(ADD YOUR S3 BUCKET ADDRESS HERE)/*",
+                "arn:aws:s3:::user-images-(ADD YOUR S3 BUCKET ADDRESS HERE)"
+            ]
+        }
+    ]
+}
+
   
   ### Pricing 
 

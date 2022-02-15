@@ -42,3 +42,4 @@ const ThoughtList = ({ thoughts, title }) => {
 };
 
 export default ThoughtList;
+
