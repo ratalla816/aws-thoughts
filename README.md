@@ -122,6 +122,37 @@
   The type of Action or what this policy allows, is GetObject, which also means the read object, which is the image file in this case.<br> 
   In the Resource property, you designate the S3 bucket name and all its contents.<br>
 
+  ### DEPLOYMENT 
+
+  create an EC2 instance by following these steps:<br>
+
+  Navigate to the AWS Management Console in the browser.<br>
+
+  In the Find Services search field, select EC2. The EC2 console will open.<br>
+
+  Scroll down and select the Launch Instance button.<br>
+
+  #### Choose an Amazon Machine Image (AMI)
+An AMI is a preconfigured template of software. This step is to select the operating system and application server so that the EC2 instance has the correct software configuration needed by your application.<br>
+Select the Ubuntu Server AMI template, which is on the free tier.<br>
+
+Choose an Instance Type:<br>
+Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. An instance type will have different configurations of CPU, memory, storage, and networking capacity.<br>
+Choose the t2.micro option because it's free-tier eligible and capable of fulfilling the requirements of the Deep Thoughts application.<br>
+
+Configure Instance Details:<br>
+hoose the t2.micro option because it's free-tier eligible and capable of fulfilling the requirements of the Deep Thoughts application.<br>
+
+In this step, we can create a new Virtual Private Cloud, or VPC. As we learned previously, a private cloud can offer more security because we can regulate inbound traffic. Here we have an opportunity to select an IAM role.<br>
+We'll create a new IAM role and a new set of permissions because the current IAM role has admin privileges. Ideally, limiting the IAM permissions on an EC2 instance is preferred to limit vulnerability to the AWS account.<br>
+
+
+Create an IAM role in the IAM console in another tab in the browser so that we can continue with this EC2 configuration later. Select Roles from the right side menu, then select "Create role".<br>
+
+
+Next select "Create policy", and select the JSON tab. Replace with the following JSON object:<br>![Screenshot](./assets/images/iam-policy.jpg)<br>
+
+
   
   ### Pricing 
 
