@@ -152,7 +152,11 @@ Create an IAM role in the IAM console in another tab in the browser so that we c
 
 Next select "Create policy", and select the JSON tab. Replace with the following JSON object:<br>![Screenshot](./assets/images/iam-policy.jpg)<br>
 
-
+With the preceding JSON statement, we'll be able to access S3 and DynamoDB from the EC2 instance. 
+However, you will still need to use the access and private keys to authenticate into these services.<br>  
+Once we select the Review button, we're redirected to the "Review policy" page, where we name the policy and describe the permissions allowed.<br> 
+Name this IAM role S3-DynamoDB so that we can remember which services this role is giving access to.<br>
+Assign this role to the EC2 instance to ensure you can communicate with S3 and DynamoDB.<br>
   
   ### Pricing 
 
