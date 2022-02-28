@@ -10,7 +10,7 @@
 
 # production
 /build
-/.ssh
+/ssh
 
 # misc
 .DS_Store
