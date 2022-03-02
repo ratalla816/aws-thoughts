@@ -198,6 +198,9 @@ Next, copy the following command for an example of how to connect to the instanc
 ssh -i "aws-thought.pem" ubuntu@ec2-##-###-##-###.us-east-2.compute.amazonaws.com<br>
 
 If successful, we'll be prompted to confirm connection. Affirm with yes, to see the following message in the command line:<br>
+![Screenshot](./assets/images/ec2-success.jpg)<br>
+
+
   
   ### Pricing 
 
