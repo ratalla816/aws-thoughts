@@ -251,7 +251,16 @@ apt install nginx<br>
 To test the installation, start the nginx server by running the following command:<br>
 systemctl start nginx<br>
 
+#### Configure the NGINX Server
 
+Next, configure this application server to handle the communication from the application's front and back ends.<br>
+We'll use proxies to route the exposed route from nginx to the client and server.<br>
+Then we'll modify the fetch calls in the UI components to connect to the API routes of the application's back end.<br>
+
+Run the following command to enter the text editor in the EC2 instance to allow code to be changed. We'll create a new configuration file so that the application can be exposed to port 80.<br>
+The server configuration file is located at the root folder in the following path:<br>
+nano /etc/nginx/sites-available/default<br>
+**THIS IS WHERE MY CMD cli freaked out.. try this operation again in git bash**<br>
 
   
   ### Pricing 
