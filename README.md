@@ -159,6 +159,45 @@ However, you will still need to use the access and private keys to authenticate 
 Once we select the Review button, we're redirected to the "Review policy" page, where we name the policy and describe the permissions allowed.<br> 
 Name this IAM role S3-DynamoDB so that we can remember which services this role is giving access to.<br>
 Assign this role to the EC2 instance to ensure you can communicate with S3 and DynamoDB.<br>
+
+### Set up EC2 Environment
+
+We need to configure the EC2 environment so that the Deep Thoughts application can run on the virtual machine.<br> 
+We'll need the following to begin:<br> 
+
+AWS-CLI<br> 
+Node.js and npm<br> 
+Git<br> 
+To do this, we must first connect to the EC2 instance from the command line.<br> 
+In the security group configuration, we left a default setting for inbound traffic to allow an SSH IP connection on port 22. <br> 
+First navigate in the command line to the .ssh folder. Then go to the browser, navigate to the EC2 console, and select the dashboard.<br> 
+
+Next, select Running Instances to see which EC2 instances are running or stopped. After a few minutes, the EC2 instance should be green, with a running instance state.<br> 
+
+*Important:**
+If the instance is running, then AWS is counting this time towards the free time given in the free tier.<br>
+Even though the EC2 instance is currently idle and not actively processing anything, because this virtual machine is provisioned, the rental time begins when the state of the instance is running.<br>
+
+To turn the instance state off, select the checkbox for this instance and select the Actions button.<br>
+This will drop down a menu of options, including the instance state. By choosing that option, we can stop the instance.<br>
+
+As a general rule, if only one instance is running at any given time, then the free tier will not be exceeded.<br>
+
+Now select the Instance ID to expand the details of the EC2 instance we just launched. This section is divided by tabs that detail information about the EC2 instance—for example, the security group, to see which ports have access to the app or the instance type. Also look at the Network tab and write down the information regarding the public IPv4 address. We'll use this address to access the EC2 instance from the internet. Look at the options also available in the side menu, in case we need to make changes in the instance configuration.
+
+Let's make sure that the instance is still running and select the Connect button at the top left area of the page. This will direct us to another page with details of the SSH client. We'll use the SSH client to connect to the EC2 instance from the command line.<br>
+
+As directed by this page, in the ~/.ssh directory, run the following commands:<br>
+
+chmod 400 aws-thought.pem<br>
+
+This command ensures that the key isn't publicly viewable.<br>
+
+Next, copy the following command for an example of how to connect to the instance:<br>
+
+ssh -i "aws-thought.pem" ubuntu@ec2-##-###-##-###.us-east-2.compute.amazonaws.com<br>
+
+If successful, we'll be prompted to confirm connection. Affirm with yes, to see the following message in the command line:<br>
   
   ### Pricing 
 
