@@ -66,7 +66,7 @@
   *Set Up the EC2 Environment<br>
   <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-4-deploy><br>
   
-  ![Screenshot](./assets/images/set-up-ec2.jpg)<br>
+  ![Screenshot](./assets/images/start-nginx.jpg)<br>
  
   ## Usage
 
@@ -199,6 +199,58 @@ ssh -i "aws-thought.pem" ubuntu@ec2-##-###-##-###.us-east-2.compute.amazonaws.co
 
 If successful, we'll be prompted to confirm connection. Affirm with yes, to see the following message in the command line:<br>
 ![Screenshot](./assets/images/ec2-success.jpg)<br>
+
+#### Install the Application Environment Dependencies
+
+Next, add the runtime environment that will execute the application.<br>
+Start with the following command to receive root access control:<br>
+sudo su -<br>
+
+The command prompt changed to root. Without assigned root user status, we'd need to prefix the installation commands with sudo to run these commands with root user permission.<br>
+Because the EC2 instance has open access to the internet, we need tightened security around file permissions, especially for code installations.<br>
+
+Update the environment with the following Ubuntu command using the APT package:<br>
+
+* apt update<br>
+
+! The apt command might seem similar to the npm command in the Node.js !<br>
+
+### Install AWS-CLI
+
+Next install AWS-CLI, which is a useful command-line tool that we used previously to connect to the DynamoDB service.<br>
+Here, we'll use it to store the access keys that the application will use to authenticate access for the S3 and DynamoDB services.<br>
+
+*Store the Access Key and Private Key<br>
+Now use the AWS-CLI tool to store the access key and private key.<br>
+To begin, run the following command:<br>
+* aws configure<br>
+When prompted, enter the access and private keys, set the region as us-east-2, and assign the data type to JSON.<br>
+
+#### Install Node.js, NPM, and Git
+
+*Install Node.js and npm by using the following commands:<br>
+curl -sL https://deb.nodesource.com/setup_10.x | bash -<br>
+apt install -y nodejs<br>
+
+Run node --version to check if the installation was successful.<br>
+
+*Next install Git with the following command:<br>
+apt install git-all<br>
+
+Run git --version to verify that installation was successful.<br>
+
+*In the browser, navigate to the GitHub repo for aws-thought. We'll clone this repo in the EC2 instance by copying the HTTPS URL from the GitHub repo on the main branch.<br>
+
+Go back to the CLI and navigate to /opt/ and clone aws-thought to the EC2 instance. Root folder access to the application will simplify the application's availability to the application server.
+
+### Install NGINX
+
+*To install nginx, run the following command in the Ubuntu CLI:<br>
+apt install nginx<br>
+
+To test the installation, start the nginx server by running the following command:<br>
+systemctl start nginx<br>
+
 
 
   
