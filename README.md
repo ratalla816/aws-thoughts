@@ -62,11 +62,11 @@
   * <a href="https://www.nginx.com">Nginx (free and open-source web server that can also serve as a reverse proxy, load balancer, mail proxy, or HTTP cache)</a>
   * <a href="https://dynobase.dev/run-dynamodb-locally/#connecting-dynamodb-offline-sdk">How to run DynamoDB Local and Offline - Complete Guide</a>
   
-  ### Left off here:<br>
+  <!-- ### Left off here:<br>
   *Set Up the EC2 Environment<br>
   <https://coding-boot-camp.github.io/continuation-courses/aws/lesson-4-deploy><br>
   
-  ![Screenshot](./assets/images/start-nginx.jpg)<br>
+  ![Screenshot](./assets/images/start-nginx.jpg)<br> -->
  
   ## Usage
 
@@ -260,7 +260,7 @@ Then we'll modify the fetch calls in the UI components to connect to the API rou
 Run the following command to enter the text editor in the EC2 instance to allow code to be changed. We'll create a new configuration file so that the application can be exposed to port 80.<br>
 The server configuration file is located at the root folder in the following path:<br>
 nano /etc/nginx/sites-available/default<br>
-**THIS IS WHERE MY CMD cli freaked out.. try this operation again in git bash**<br>
+
 
   
   ### Pricing 
